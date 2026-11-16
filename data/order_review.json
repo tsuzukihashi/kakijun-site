@@ -1,0 +1,12 @@
+{
+  "_説明": "KanjiVG と AnimCJK（照合だけに使う別のデータ）で書き順が違った字の決め方。keep = KanjiVG のまま／reorder = order の順に並べ直す（1 から数える）",
+  "decisions": [
+    {"chars": "糾紀約紅紋納紐純紗紘紙級紛紡紬細紳紹紺終絃組絆経結絞絡絢給統絵絹継綜維綱網綴綸綺綻綾綿緋緑緒締編緩緯練緻縁縄縞縫縮績繊織繕繭纏",
+     "decision": "keep",
+     "reason": "糸へんの下の部分は「小」と同じく、中の縦 → 左の点 → 右の点。KanjiVG がこの順。AnimCJK は左の点から書いている"},
+    {"chars": "祐", "decision": "keep", "reason": "右の部分は「右」と同じく ノ → 一。AnimCJK は 一 から書いている"},
+    {"chars": "晝", "decision": "keep", "reason": "上の部分は「書」と同じく、横画を全部書いてから縦画。AnimCJK も「書」ではこの順で、晝だけ違う"},
+    {"chars": "牽", "decision": "reorder", "order": [1, 2, 3, 6, 7, 4, 5, 8, 9, 10, 11],
+     "reason": "上から書き終える（玄 → 冖 → 牛）。KanjiVG は玄の途中で冖を書いて戻っていた。AnimCJK がこの順"}
+  ]
+}

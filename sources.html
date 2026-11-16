@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja" data-title-ja="データの出典と直したところ - 書き順しらべ" data-title-en="Data sources and changes - Kanji Strokes">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"ja"],p="en";for(var i=0;i<l.length;i++){var c=String(l[i]).toLowerCase();if(c.indexOf("ja")===0){p="ja";break}if(c.indexOf("en")===0){p="en";break}}var d=document.documentElement;d.lang=p;var t=d.getAttribute("data-title-"+p);if(t){document.title=t}})();</script>
+<title>データの出典と直したところ - 書き順しらべ</title>
+<meta name="description" content="書き順しらべが使っているデータ（KanjiVG・KANJIDIC2・JMdict）と、このアプリのために直したところ、確かめ方。 / The data Kanji Strokes uses (KanjiVG, KANJIDIC2, JMdict), what we changed for this app, and how we checked it.">
+<meta property="og:title" content="データの出典と直したところ - 書き順しらべ">
+<meta property="og:description" content="書き順しらべが使っているデータ（KanjiVG・KANJIDIC2・JMdict）と、このアプリのために直したところ、確かめ方。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kakijun.tsuzukit.com/sources.html">
+<meta property="og:image" content="https://kakijun.tsuzukit.com/assets/og.jpg">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-l="ja" lang="ja">
+<header class="site"><div class="wrap">
+<a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32">書き順しらべ</a>
+<nav class="site"><a href="./">紹介</a><a href="support.html">使い方</a><a href="sources.html">出典</a><a href="privacy.html">プライバシー</a></nav>
+</div></header>
+<main class="wrap">
+<article class="doc">
+<p class="eyebrow">DATA SOURCES</p>
+<h1>データの出典と直したところ</h1>
+<p class="meta">書き順しらべ／元データの版 r20260714 2026-11-16</p>
+<p>書き順しらべの字のデータは、次の3つを、このアプリのために組み直したものです。どれも、出典と条件を示せば商用のアプリでも使えるデータです。直したデータは、同じ条件でこのページから配っています。</p>
+
+<h2>使っているデータ</h2>
+<table>
+<tr><th>書き順と字の形</th><td><a href="https://kanjivg.tagaini.net/">KanjiVG</a>（Copyright © 2009–2026 Ulrich Apel）<br>条件: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td></tr>
+<tr><th>読み・画数・学年・英語の意味</th><td><a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project">KANJIDIC2</a></td></tr>
+<tr><th>用例とよみ</th><td><a href="https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project">JMdict</a></td></tr>
+</table>
+<p>This application uses the JMdict and KANJIDIC2 dictionary files. These files are the property of the <a href="https://www.edrdg.org/">Electronic Dictionary Research and Development Group</a>, and are used in conformance with the Group's <a href="https://www.edrdg.org/edrdg/licence.html">licence</a>. 条件: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+<p>手書きの読み取りは、<a href="https://github.com/asdfjkl/kanjicanvas">KanjiCanvas</a>（Copyright © 2019–2024 Dominik Klein, © 2020 Seth Clydesdale・MIT License）の方式を Swift と Kotlin に移したものです。比べるための字の形は、KanjiVG から作っています。</p>
+
+<h2>このアプリのために直したところ</h2>
+<ul>
+<li><strong>入れた字</strong>: KanjiVG にある漢字のうち、異体の字と、互換漢字（Unicode で同じ字として扱われるもの）を除いた 6,422字と、ひらがな・カタカナ 180字</li>
+<li><strong>書き順の突き合わせ</strong>: 常用漢字・人名用漢字・かなの全部（2,910字）を、別のデータ（<a href="https://github.com/parsimonhi/animCJK">AnimCJK</a> の日本の字。照合だけに使い、アプリには入れていません）と画ごとに突き合わせました。書き順がくいちがった66字は1字ずつ見て、65字は KanjiVG のまま（糸へんの下の部分は 中の縦 → 左の点 → 右の点、など）、「牽」の1字は上から書き終える順（玄 → 冖 → 牛）に並べ直しました</li>
+<li><strong>画数の注記</strong>: KanjiVG が描く画の数と KANJIDIC2 の画数がちがう108字（しんにょう・くさかんむりなど、数え方で変わる字）に、字の画面で注記を出しています。アプリの画数は、描いている画の数です</li>
+<li><strong>用例</strong>: JMdict の語から、JMdict で「よく使う語」の印（新聞での頻度など）が付いた語を先に、字ごとに5つまで選びました。読みは、その語のふつうの読みを1つ。常用漢字は全部の字に用例があります（5,135字）</li>
+<li><strong>部首</strong>: KANJIDIC2 の部首の番号に、214部首の形と日本語の名前（へん・かんむりなど）を付けました</li>
+</ul>
+
+<h2>直したデータ（CC BY-SA）</h2>
+<p>アプリに入れているものと同じファイルです。元のデータの条件をそのまま引き継ぎます（書き順と字の形は CC BY-SA 3.0、読み・画数・用例は CC BY-SA 4.0）。</p>
+<ul>
+<li><a href="data/chars.json">chars.json</a>（字・画数・区分・学年・読み・英語の意味・用例・注記）</li>
+<li><a href="data/strokes.json">strokes.json</a>（字ごとの画の線・番号の位置）</li>
+<li><a href="data/radicals.json">radicals.json</a>（214部首の形と名前）</li>
+<li><a href="data/order_review.json">order_review.json</a>（書き順がくいちがった字の決め方と理由）</li>
+<li><a href="data/kana_counts.json">kana_counts.json</a>（かなの画数）</li>
+<li><a href="data/meta.json">meta.json</a>（字の数と元データの版）</li>
+</ul>
+
+<h2>データを新しくする手順</h2>
+<p>元のデータは更新されます。アプリの版を出すたびに、KanjiVG のリリース・KANJIDIC2・JMdict を取り直し、組み直して、上の突き合わせをもう一度通してから入れます。</p>
+
+<h2>まちがいを見つけたら</h2>
+<p>書き順・画数・読み・用例のまちがいは、<a href="mailto:ryo.tsuzukihashi@tsuzukit.com">ryo.tsuzukihashi@tsuzukit.com</a> へ。どの字の、どこがちがうかを書いていただけると助かります。</p>
+</article>
+</main>
+<footer class="site"><div class="wrap">
+<p><a href="./">紹介</a><a href="support.html">使い方とお問い合わせ</a><a href="sources.html">データの出典</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></p>
+<p>書き順しらべは、個人開発者の續橋涼（TsuzuKit）が作っているアプリです。学校・教科書・試験団体の公式アプリではありません。</p>
+<p>© 2026 TsuzuKit</p>
+</div></footer>
+</div>
+<div data-l="en" lang="en">
+<header class="site"><div class="wrap">
+<a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32">Kanji Strokes</a>
+<nav class="site"><a href="./">About</a><a href="support.html">Help</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+<main class="wrap">
+<article class="doc">
+<p class="eyebrow">DATA SOURCES</p>
+<h1>Data sources and changes</h1>
+<p class="meta">Kanji Strokes · Source data version r20260714 2026-11-16</p>
+<p>The character data in Kanji Strokes was rebuilt for this app from the three sources below. All of them may be used in commercial apps with attribution under their licenses. Our modified data is distributed from this page under the same terms.</p>
+
+<h2>Sources</h2>
+<table>
+<tr><th>Stroke order and shapes</th><td><a href="https://kanjivg.tagaini.net/">KanjiVG</a> (Copyright © 2009–2026 Ulrich Apel)<br>License: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td></tr>
+<tr><th>Readings, stroke counts, grades, English meanings</th><td><a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project">KANJIDIC2</a></td></tr>
+<tr><th>Example words</th><td><a href="https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project">JMdict</a></td></tr>
+</table>
+<p>This application uses the JMdict and KANJIDIC2 dictionary files. These files are the property of the <a href="https://www.edrdg.org/">Electronic Dictionary Research and Development Group</a>, and are used in conformance with the Group's <a href="https://www.edrdg.org/edrdg/licence.html">licence</a>. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+<p>Handwriting recognition ports the method of <a href="https://github.com/asdfjkl/kanjicanvas">KanjiCanvas</a> (Copyright © 2019–2024 Dominik Klein, © 2020 Seth Clydesdale, MIT License) to Swift and Kotlin. The reference shapes are built from KanjiVG.</p>
+
+<h2>What we changed</h2>
+<ul>
+<li><strong>Characters included</strong>: 6,422 kanji from KanjiVG, excluding variant forms and CJK compatibility ideographs (which Unicode treats as the same character), plus 180 hiragana and katakana</li>
+<li><strong>Stroke order cross-check</strong>: every Jōyō kanji, name kanji and kana (2,910 characters) was compared stroke by stroke with another dataset (the Japanese characters of <a href="https://github.com/parsimonhi/animCJK">AnimCJK</a>, used only for checking and not shipped in the app). We reviewed all 66 disagreements one by one: 65 keep KanjiVG's order (for example, the bottom of the 糸 radical is center stroke, left dot, right dot), and 牽 was reordered to finish the top before moving down (玄 → 冖 → 牛)</li>
+<li><strong>Stroke count notes</strong>: for the 108 characters where KanjiVG's drawn strokes differ from KANJIDIC2's count (such as the ⻌ and 艹 radicals), the character screen shows a note. The app's stroke count is the number of strokes drawn</li>
+<li><strong>Example words</strong>: up to five words per character from JMdict, preferring words JMdict marks as common (for example by newspaper frequency), each with its usual reading. Every Jōyō kanji has examples (5,135 characters in total)</li>
+<li><strong>Radicals</strong>: the shapes and Japanese names of all 214 radicals were added to KANJIDIC2's radical numbers</li>
+</ul>
+
+<h2>Modified data (CC BY-SA)</h2>
+<p>These are the same files shipped in the app. They inherit the source licenses (CC BY-SA 3.0 for stroke order and shapes, CC BY-SA 4.0 for readings, counts and examples).</p>
+<ul>
+<li><a href="data/chars.json">chars.json</a> (character, stroke count, category, grade, readings, English meanings, examples, notes)</li>
+<li><a href="data/strokes.json">strokes.json</a> (stroke paths and number positions)</li>
+<li><a href="data/radicals.json">radicals.json</a> (214 radical shapes and names)</li>
+<li><a href="data/order_review.json">order_review.json</a> (decisions and reasons for stroke order disagreements)</li>
+<li><a href="data/kana_counts.json">kana_counts.json</a> (kana stroke counts)</li>
+<li><a href="data/meta.json">meta.json</a> (character counts and source version)</li>
+</ul>
+
+<h2>Keeping the data up to date</h2>
+<p>The sources are updated over time. For each app release, we fetch the latest KanjiVG release, KANJIDIC2 and JMdict, rebuild, and rerun the cross-check above before shipping.</p>
+
+<h2>Found a mistake?</h2>
+<p>Please email <a href="mailto:ryo.tsuzukihashi@tsuzukit.com">ryo.tsuzukihashi@tsuzukit.com</a> with the character and what looks wrong.</p>
+</article>
+</main>
+<footer class="site"><div class="wrap">
+<p><a href="./">About</a><a href="support.html">Help & Contact</a><a href="sources.html">Data sources</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a></p>
+<p>Kanji Strokes is made by Ryo Tsuzukihashi, an independent developer (TsuzuKit). It is not an official app of any school, textbook or test.</p>
+<p>© 2026 TsuzuKit</p>
+</div></footer>
+</div>
+</body>
+</html>
